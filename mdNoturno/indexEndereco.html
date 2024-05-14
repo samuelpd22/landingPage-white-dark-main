@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../style.css">
+    <title>webSite</title>
+   
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="#" class="logo">PutzGrilla</a>
+            <ul class="nav-menu">
+                <button id="modo-noturno"><i class='bx bxs-moon'></i></button>
+                <button id="modo-dia" style="display: none;"><i class='bx bxs-sun'></i></button>
+                <li class="nav-item"><a  href="./IndexModoNoturno.html">Home</a></li>
+                <li class="nav-item"><a target="_blank" href="#">Sobre</a></li>
+                <li class="nav-item"><a target="_blank" href="#">Menu</a></li>
+                <li class="nav-item"><a target="_blank" href="">Endereço</a></li>
+                <i class='bx bx-search'></i>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Div para conter o mapa -->
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <main>
+        <!-- Seção principal -->
+    </main>
+    <footer>
+        <div class="address">
+            <h3>Endereço</h3>
+            <p>Rua Marechal Floriano, Centro , n 46</p>
+            <p>Coronel Fabriciano - MG</p>
+            <p>CEP:  35170-049</p>
+        </div>
+    </footer>
+
+    <!-- Link para o WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" class="whatsapp-icon">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+    
+    <!-- Script para inicializar o mapa -->
+    <script src='https://unpkg.com/leaflet/dist/leaflet.js'></script>
+    <link href='https://unpkg.com/leaflet/dist/leaflet.css' rel='stylesheet' />
+    
+    <script src="../script.js"></script>
+</body>
+</html>
