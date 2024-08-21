@@ -289,8 +289,7 @@ body.dark-mode {
     }
 }
 
-
-/* Adicione estilos para o formulário e o aside */
+/* Formulário e aside */
 .form-container {
     position: fixed;
     top: 50%;
@@ -378,24 +377,11 @@ body.dark-mode {
 
 @media (max-width: 1290px) {
     .home-text {
-        display: none;
-        /* Oculta o texto quando a tela é menor que 785px */
+        display: block; /* Mostra o texto em telas menores */
     }
 
     .form-container {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        /* Ajuste a largura conforme necessário */
-        max-width: 300px;
-        /* Define uma largura máxima */
-        background-color: var(--white);
-        padding: 20px;
-        transition: background-color 0s, color 0s;
-        z-index: 999;
-        /* Defina um z-index menor para o formulário */
+        display: none; /* Esconde o formulário em telas menores */
     }
 
     .nav-menu.ativo {
@@ -403,9 +389,9 @@ body.dark-mode {
         z-index: 1001;
         /* Mantém o z-index do menu maior que o formulário quando estiver ativo */
     }
-
 }
 
+/* WhatsApp Icon */
 .whatsapp-icon {
     position: fixed;
     bottom: 20px;
@@ -438,48 +424,32 @@ body.dark-mode {
     animation: none; /* Para a animação quando o ícone estiver sendo hover */
 }
 
-
-
-
-
-
-
+/* Endereço e mapa */
 .address {
     margin-top: 1px; /* Distância entre o endereço e o mapa */
     text-align: center; /* Centraliza o texto */
     margin-bottom: 40px;
 }
+
 #map-container {
     
     margin-bottom: 1px; /* Distância entre o mapa e o rodapé */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 3px); /* Altura da tela menos a altura do navbar e do endereço */
-    
+    height: calc(80vh - 3px); /* Altura da tela menos a altura do navbar e do endereço */
 }
 
 #map {
     height: 75%; /* Altura do mapa ajustada para 100% do container */
-    width: 100%; /* Largura do mapa */
-    
-    
+    width: 80%; /* Largura do mapa */
 }
-h3{
-    color:#fc4c35 ;
+
+h3 {
+    color: #fc4c35;
     margin-top: 20px; /* Distância entre o endereço e o mapa */
     text-align: center; /* Centraliza o texto */
 }
-
-
-
-
-
-
-
-
-
-
 
 /* Rodapé responsivo */
 @media (max-width: 785px) {
@@ -489,12 +459,13 @@ h3{
     }
 
     #map-container {
+       
         margin-bottom: 20px; /* Distância entre o mapa e o rodapé */
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 200px; /* Altura mínima do container do mapa */
-        overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse a altura máxima */
+       /* Oculta qualquer conteúdo que ultrapasse a altura máxima */
     }
 
     #map {
@@ -505,6 +476,7 @@ h3{
     /* Ajuste para o texto h3 abaixo do mapa */
     footer {
         margin-top: 20px; /* Adiciona margem acima do rodapé */
+        margin-bottom: 20px;
     }
 
     footer .address {
